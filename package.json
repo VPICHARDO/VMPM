@@ -1,0 +1,23 @@
+{
+  "name": "vmpm_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+
+    "start": "node app.js",
+    "nodemon":  "nodemon --watch src app.js" 
+    
+  },
+  "author": "VIRGILIO MANUEL PICHARDO MEDINA",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongose": "0.0.2-security",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

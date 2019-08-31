@@ -1,0 +1,50 @@
+<% include Vistas_Parciales/_Header %>
+<br><br><br>
+<div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                        <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                        <tr>
+                                                <th>NOMBRE</th>
+                                                <th>APELLIDO</th>
+                                                <th>CEDULA</th>
+                                                <th>GENERO</th>
+                                                <th>ESTADO</th>
+                                                <th>OPCIONES</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <% for(var i = 0; i< P.length; i++ ){%>
+                                        <tr>
+                                                <tbody>
+                                                        <tr>
+                                                                <td></td>
+                                                        </tr>
+                                                </tbody>
+                                        
+                                                <td><%= P[i].NOMBRE %></td>
+                                                <td><%= P[i].APELLIDO %></td>
+                                                <td><%= P[i].CEDULA %></td>
+                                                <td><%= P[i].SEXO %></td>
+                                                <td><%= P[i].ESTADO %></td>
+
+                                               
+                                                <td> 
+                                               
+                                                <a href="/Persona_Upd/<%=P[i].CEDULA%>" class="btn btn-primary">EDITAR</a>
+                                                <a href="/Delete/<%= P[i].CEDULA %>" class="btn btn-danger">ELIMINAR</a>
+                                        </td>
+                                        </tr>
+                                        <%} %>
+
+                                </tbody>
+
+                        </table>
+                </div>
+        </div>
+</div>
+<br><br>
+
+
+<% include Vistas_Parciales/_Footer %>

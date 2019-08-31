@@ -1,0 +1,50 @@
+
+<%include Vistas_Parciales/_Header%>
+
+<!--SCRIPT DE JS DE AJAX-->
+<!--<script type="text/javascript" src="../Hola.js" rel="stylesheet"></script>-->
+<!--<<script type="text/javascript" src="../Ajax_Add_Pers.js" rel="stylesheet"></script>-->
+<!--<<script type="text/javascript" src="../jQuery_14.js" rel="stylesheet"></script>-->
+
+<script  src="../Hola.js" rel="stylesheet"></script>
+
+
+<br><br><br>
+<div class="container">
+        <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                                <div class="card">
+                                                <div class="card-body">
+                                             <form  action="/Persona_Upd_Guard/<%= pers3[0].CEDULA%>" method="POST" >
+                                                  <div class="form-group">
+                                                  <input type="text" name="NOMBRE" placeholder="Nombre" class="form-group" value ="<%=pers3[0].NOMBRE%>">
+                                                        </div>
+                                                                                        
+                                          <div class="form-group">
+                                                   <input type="text" name="APELLIDO" placeholder="Apellido" class="form-group" value ="<%= pers3[0].APELLIDO%>" >
+                                                        </div>
+                                
+                                                        <div class="form-group">
+                                                                        <input type="text" name="CEDULA"   id = "ID_Ced" placeholder="Cedula" class="form-group" value ="<%= pers3[0].CEDULA%>" >
+                                                                       </div>
+                                                                       
+
+                                                        <div class="form-group" >
+                                                                        <select class="form-group" name="SEXO" id="SEXO">
+                                                                                <option value="HOMBRE">HOMBRE</option>
+                                                                                <option value="MUJER">MUJER</option>
+                                                                        </select>
+                                                                               </div>
+                                           <div class="form-group">
+                                                <input type="submit" value="GUARDAR DATOS" class="form-group btn-primary btn-block" onclick= "verificar()" >
+                                                      </div>
+                                                 </form>
+                                                                                
+                                              </div>
+                                              </div>
+                </div>
+                <div class="col-md-4"></div>
+        </div>
+</div>
+
